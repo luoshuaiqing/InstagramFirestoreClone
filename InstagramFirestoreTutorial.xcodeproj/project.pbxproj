@@ -13,6 +13,7 @@
 		24F658B72A92CDB7002D97E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F658B52A92CDB7002D97E3 /* Main.storyboard */; };
 		24F658B92A92CDB8002D97E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F658B82A92CDB8002D97E3 /* Assets.xcassets */; };
 		24F658BC2A92CDB8002D97E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F658BA2A92CDB8002D97E3 /* LaunchScreen.storyboard */; };
+		24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658CD2A92CEE0002D97E3 /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		24F658B82A92CDB8002D97E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F658BB2A92CDB8002D97E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F658BD2A92CDB8002D97E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24F658CD2A92CEE0002D97E3 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,12 @@
 		24F658AE2A92CDB7002D97E3 /* InstagramFirestoreTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				24F658CC2A92CE25002D97E3 /* Model */,
+				24F658CB2A92CE24002D97E3 /* View */,
+				24F658CA2A92CE21002D97E3 /* ViewModel */,
+				24F658C92A92CE1F002D97E3 /* Controller */,
+				24F658C62A92CE19002D97E3 /* API */,
+				24F658C32A92CE0B002D97E3 /* Utils */,
 				24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */,
 				24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */,
 				24F658B32A92CDB7002D97E3 /* ViewController.swift */,
@@ -65,6 +73,49 @@
 				24F658BD2A92CDB8002D97E3 /* Info.plist */,
 			);
 			path = InstagramFirestoreTutorial;
+			sourceTree = "<group>";
+		};
+		24F658C32A92CE0B002D97E3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		24F658C62A92CE19002D97E3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		24F658C92A92CE1F002D97E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24F658CD2A92CEE0002D97E3 /* MainTabController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24F658CA2A92CE21002D97E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24F658CB2A92CE24002D97E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24F658CC2A92CE25002D97E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */,
 				24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */,
+				24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */,
 				24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
