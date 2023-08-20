@@ -8,13 +8,14 @@ class MainTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .red
+        configureViewControllers()
     }
     
     // MARK: - Helpers
     
     func configureViewControllers() {
+        view.backgroundColor = .white
+        
         let feed = FeedController()
         let search = SearchController()
         let imageSelector = ImageSelectorController()
@@ -22,6 +23,10 @@ class MainTabController: UITabBarController {
         let profile = ProfileController()
         
         viewControllers = [feed, search, imageSelector, notifications, profile]
+    }
+    
+    func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
+        let nav = UINavigationController(rootViewController: rootViewController)
     }
     
 }
