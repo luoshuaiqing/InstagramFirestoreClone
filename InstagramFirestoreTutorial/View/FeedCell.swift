@@ -57,14 +57,14 @@ class FeedCell: UICollectionViewCell {
     private let likesLabel: UILabel = {
        let label = UILabel()
         label.text = "1 like"
-        label.font = .boldSystemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let captionLabel: UILabel = {
        let label = UILabel()
         label.text = "Some text caption for now.."
-        label.font = .boldSystemFont(ofSize: 12)
+        label.font = .systemFont(ofSize: 14)
         return label
     }()
     
@@ -97,6 +97,15 @@ class FeedCell: UICollectionViewCell {
         postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         
         configureActionButtons()
+        
+        addSubview(likesLabel)
+        likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+        
+        addSubview(captionLabel)
+        captionLabel.anchor(top: likesLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        
+        addSubview(postTimeLabel)
+        postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
     }
     
     required init?(coder: NSCoder) {
