@@ -20,6 +20,7 @@
 		24F658D62A92D6B1002D97E3 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658D52A92D6B1002D97E3 /* NotificationsController.swift */; };
 		24F658D82A92D6BA002D97E3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658D72A92D6BA002D97E3 /* ProfileController.swift */; };
 		24F658DA2A92E008002D97E3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658D92A92E008002D97E3 /* FeedCell.swift */; };
+		24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658DB2A92E0BD002D97E3 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		24F658D52A92D6B1002D97E3 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		24F658D72A92D6BA002D97E3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		24F658D92A92E008002D97E3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		24F658DB2A92E0BD002D97E3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		24F658C32A92CE0B002D97E3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				24F658DB2A92E0BD002D97E3 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				24F658D82A92D6BA002D97E3 /* ProfileController.swift in Sources */,
 				24F658D02A92D68F002D97E3 /* FeedController.swift in Sources */,
 				24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */,
+				24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */,
 				24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
