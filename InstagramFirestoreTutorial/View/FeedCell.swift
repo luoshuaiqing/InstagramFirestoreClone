@@ -95,6 +95,8 @@ class FeedCell: UICollectionViewCell {
         postImageView.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
         
         postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        
+        configureActionButtons()
     }
     
     required init?(coder: NSCoder) {
@@ -105,5 +107,16 @@ class FeedCell: UICollectionViewCell {
     
     @objc func didTapUsername() {
         print("debug: did tap username")
+    }
+    
+    // MARK: - Helpers
+    
+    func configureActionButtons() {
+        let stackView = UIStackView(arrangedSubviews: [likeButton, commentButton, shareButton])
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        
+        addSubview(stackView)
+        stackView.anchor(top: postImageView.bottomAnchor, width: 120, height: 50)
     }
 }
