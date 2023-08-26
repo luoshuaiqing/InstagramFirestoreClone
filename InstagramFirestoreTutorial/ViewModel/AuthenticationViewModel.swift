@@ -1,6 +1,6 @@
 // Copyright © 2023 Snap, Inc. All rights reserved.
 
-import Foundation
+import UIKit
 
 struct LoginViewModel {
     var email: String?
@@ -8,6 +8,14 @@ struct LoginViewModel {
     
     var formIsValid: Bool {
         return email?.isEmpty == false && password?.isEmpty == false
+    }
+    
+    var buttonBackgroundColor: UIColor {
+        return formIsValid ? .systemPurple : .systemPurple.withAlphaComponent(0.5)
+    }
+    
+    var buttonTitleColor: UIColor {
+        return formIsValid ? .white : .white.withAlphaComponent(0.67)
     }
 }
 

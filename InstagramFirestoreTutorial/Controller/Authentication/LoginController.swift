@@ -6,7 +6,7 @@ class LoginController: UIViewController {
     
     // MARK: - Properties
     
-    private let viewModel = LoginViewModel()
+    private var viewModel = LoginViewModel()
     
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "Instagram_logo_white"))
@@ -26,14 +26,16 @@ class LoginController: UIViewController {
         return tf
     }()
     
-    private let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemPurple
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        button.backgroundColor = viewModel.buttonBackgroundColor
+        button.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        button.isEnabled = viewModel.formIsValid
         return button
     }()
     
@@ -67,10 +69,14 @@ class LoginController: UIViewController {
     
     @objc func textDidChange(sender: UITextField) {
         if sender == emailTextField {
-            print("1")
+            viewModel.email = sender.text
         } else if sender == passwordTextField {
-            print("2")
+            viewModel.password = sender.text
         }
+        
+        loginButton.backgroundColor = viewModel.buttonBackgroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsValid
     }
     
     // MARK: - Helpers
