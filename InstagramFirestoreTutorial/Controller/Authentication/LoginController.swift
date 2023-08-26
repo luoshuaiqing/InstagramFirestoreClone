@@ -6,6 +6,8 @@ class LoginController: UIViewController {
     
     // MARK: - Properties
     
+    private let viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
@@ -53,6 +55,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
     }
     
     // MARK: - Actions
@@ -60,6 +63,14 @@ class LoginController: UIViewController {
     @objc func handleShowSignUp() {
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            print("1")
+        } else if sender == passwordTextField {
+            print("2")
+        }
     }
     
     // MARK: - Helpers
@@ -84,5 +95,10 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }
