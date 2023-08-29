@@ -39,7 +39,9 @@ class RegistrationController: UIViewController {
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        updateForm()
+        button.backgroundColor = viewModel.buttonBackgroundColor
+        button.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        button.isEnabled = viewModel.formIsValid
         return button
     }()
     
@@ -79,7 +81,11 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleProfilePhotoSelected() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
         
+        present(picker, animated: true, completion: nil)
     }
     
     // MARK: - Helpers
@@ -119,5 +125,14 @@ extension RegistrationController: FormViewModel {
         signUpButton.backgroundColor = viewModel.buttonBackgroundColor
         signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         signUpButton.isEnabled = viewModel.formIsValid
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
     }
 }
