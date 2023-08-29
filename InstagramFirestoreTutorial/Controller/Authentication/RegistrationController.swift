@@ -35,13 +35,13 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemPurple
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.backgroundColor = viewModel.buttonBackgroundColor
         button.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         button.isEnabled = viewModel.formIsValid
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -61,6 +61,10 @@ class RegistrationController: UIViewController {
     }
     
     // MARK: - Actions
+    
+    @objc func handleSignUp() {
+        
+    }
     
     @objc func handleShowLogin() {
         navigationController?.popViewController(animated: true)
