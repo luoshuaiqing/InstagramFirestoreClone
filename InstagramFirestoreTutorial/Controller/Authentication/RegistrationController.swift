@@ -8,10 +8,11 @@ class RegistrationController: UIViewController {
     
     private var viewModel = RegistrationViewModel()
     
-    private let plusPhotoButton: UIButton = {
+    private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.tintColor = .white
+        button.addTarget(self, action: #selector(handleProfilePhotoSelected), for: .touchUpInside)
         return button
     }()
     
@@ -75,6 +76,10 @@ class RegistrationController: UIViewController {
         }
         
         updateForm()
+    }
+    
+    @objc func handleProfilePhotoSelected() {
+        
     }
     
     // MARK: - Helpers
