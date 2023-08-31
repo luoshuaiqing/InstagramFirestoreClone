@@ -12,7 +12,7 @@ struct AuthCredentials {
 }
 
 struct AuthService {
-    static func registerUser(withCredentials credentials: AuthCredentials) {
+    static func registerUser(withCredentials credentials: AuthCredentials, completion: @escaping(Error?) -> Void) {
         
     }
 }
