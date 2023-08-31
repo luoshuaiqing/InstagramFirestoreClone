@@ -14,8 +14,8 @@
             filePath = "InstagramFirestoreTutorial/Controller/Authentication/LoginController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "InstagramFirestoreTutorial/API/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "registerUser(withCredentials:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "InstagramFirestoreTutorial/API/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "registerUser(withCredentials:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "InstagramFirestoreTutorial/API/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "registerUser(withCredentials:completion:)"
             landmarkType = "7">
          </BreakpointContent>

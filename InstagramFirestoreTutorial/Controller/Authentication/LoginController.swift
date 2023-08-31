@@ -36,6 +36,7 @@ class LoginController: UIViewController {
         button.backgroundColor = viewModel.buttonBackgroundColor
         button.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         button.isEnabled = viewModel.formIsValid
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -61,6 +62,19 @@ class LoginController: UIViewController {
     }
     
     // MARK: - Actions
+    
+    @objc func handleLogin() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        AuthService.logUserIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to log user in. \(error.localizedDescription)")
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     @objc func handleShowSignUp() {
         let controller = RegistrationController()
