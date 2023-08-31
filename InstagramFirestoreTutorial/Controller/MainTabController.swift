@@ -1,14 +1,44 @@
 // Copyright © 2023 Snap, Inc. All rights reserved.
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
+    
+    // MARK: - Properties
+    
+    var hasCheckedWhetherUserIsLoggedIn = false
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewControllers()
+        logout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkIfUserIsLoggedIn()
+    }
+    
+    // MARK: - API
+    
+    func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser == nil, !hasCheckedWhetherUserIsLoggedIn {
+            let controller = LoginController()
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        }
+        hasCheckedWhetherUserIsLoggedIn = true
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("DEBUG: Failed to sign out")
+        }
     }
     
     // MARK: - Helpers
