@@ -14,7 +14,6 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewControllers()
-        logout()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,14 +30,6 @@ class MainTabController: UITabBarController {
             self.present(nav, animated: true, completion: nil)
         }
         hasCheckedWhetherUserIsLoggedIn = true
-    }
-    
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("DEBUG: Failed to sign out")
-        }
     }
     
     // MARK: - Helpers

@@ -1,6 +1,7 @@
 // Copyright © 2023 Snap, Inc. All rights reserved.
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
@@ -17,10 +18,20 @@ class FeedController: UICollectionViewController {
     
     func configureUI() {
         collectionView.backgroundColor = .white
-        
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
     }
     
+    // MARK: - Actions
+    
+    @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("DEBUG: Failed to sign out")
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
