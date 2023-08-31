@@ -18,7 +18,7 @@ struct AuthService {
             Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) {
                 (result, error) in
                 if let error = error {
-                    print("DEBUG: Failed to register user \(error.localizedDescription)")
+                    print("DEBUG: Failed to register user. \(error.localizedDescription)")
                     return
                 }
                 
