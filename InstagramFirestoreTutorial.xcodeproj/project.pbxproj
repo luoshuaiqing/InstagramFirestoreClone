@@ -18,6 +18,8 @@
 		24D82BEE2A948A0300A2A2CB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D82BED2A948A0300A2A2CB /* LoginController.swift */; };
 		24D82BF02A948A0D00A2A2CB /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D82BEF2A948A0D00A2A2CB /* RegistrationController.swift */; };
 		24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D82BF12A948F5000A2A2CB /* CustomTextField.swift */; };
+		24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955AD2AA379C5001E776A /* ProfileCell.swift */; };
+		24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955AF2AA379D1001E776A /* ProfileHeader.swift */; };
 		24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */; };
 		24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */; };
 		24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B32A92CDB7002D97E3 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		24D82BED2A948A0300A2A2CB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		24D82BEF2A948A0D00A2A2CB /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		24D82BF12A948F5000A2A2CB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		24E955AD2AA379C5001E776A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		24E955AF2AA379D1001E776A /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		24F658AC2A92CDB7002D97E3 /* InstagramFirestoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 				24D82BEF2A948A0D00A2A2CB /* RegistrationController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		24E955B12AA379E5001E776A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				24E955AD2AA379C5001E776A /* ProfileCell.swift */,
+				24E955AF2AA379D1001E776A /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		24F658A32A92CDB7002D97E3 = {
@@ -163,6 +176,7 @@
 		24F658CB2A92CE24002D97E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24E955B12AA379E5001E776A /* Profile */,
 				24F658D92A92E008002D97E3 /* FeedCell.swift */,
 				24D82BF12A948F5000A2A2CB /* CustomTextField.swift */,
 			);
@@ -258,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */,
+				24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */,
 				24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */,
 				24D82BEE2A948A0300A2A2CB /* LoginController.swift in Sources */,
 				24F658DA2A92E008002D97E3 /* FeedCell.swift in Sources */,
@@ -272,6 +287,7 @@
 				24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */,
 				248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */,
 				248CA0AA2A9DBED4007D543A /* AuthService.swift in Sources */,
+				24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */,
 				24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */,
 				24D82BF02A948A0D00A2A2CB /* RegistrationController.swift in Sources */,
 			);
