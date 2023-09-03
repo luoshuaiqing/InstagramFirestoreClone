@@ -20,6 +20,9 @@
 		24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D82BF12A948F5000A2A2CB /* CustomTextField.swift */; };
 		24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955AD2AA379C5001E776A /* ProfileCell.swift */; };
 		24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955AF2AA379D1001E776A /* ProfileHeader.swift */; };
+		24E955B32AA4EEA9001E776A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955B22AA4EEA9001E776A /* UserService.swift */; };
+		24E955B52AA4EECD001E776A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955B42AA4EECD001E776A /* Constants.swift */; };
+		24E955B72AA4F038001E776A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955B62AA4F038001E776A /* User.swift */; };
 		24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */; };
 		24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */; };
 		24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B32A92CDB7002D97E3 /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 		24D82BF12A948F5000A2A2CB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		24E955AD2AA379C5001E776A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		24E955AF2AA379D1001E776A /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		24E955B22AA4EEA9001E776A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		24E955B42AA4EECD001E776A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		24E955B62AA4F038001E776A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24F658AC2A92CDB7002D97E3 /* InstagramFirestoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				24F658DB2A92E0BD002D97E3 /* Extensions.swift */,
+				24E955B42AA4EECD001E776A /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 			children = (
 				248CA0A72A9DBECC007D543A /* ImageUploader.swift */,
 				248CA0A92A9DBED4007D543A /* AuthService.swift */,
+				24E955B22AA4EEA9001E776A /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 		24F658CC2A92CE25002D97E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24E955B62AA4F038001E776A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,12 +290,15 @@
 				248CA09F2A9A6074007D543A /* AuthenticationViewModel.swift in Sources */,
 				24F658D22A92D697002D97E3 /* SearchController.swift in Sources */,
 				24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */,
+				24E955B72AA4F038001E776A /* User.swift in Sources */,
 				24F658D82A92D6BA002D97E3 /* ProfileController.swift in Sources */,
+				24E955B52AA4EECD001E776A /* Constants.swift in Sources */,
 				24F658D02A92D68F002D97E3 /* FeedController.swift in Sources */,
 				24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */,
 				24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */,
 				248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */,
 				248CA0AA2A9DBED4007D543A /* AuthService.swift in Sources */,
+				24E955B32AA4EEA9001E776A /* UserService.swift in Sources */,
 				24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */,
 				24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */,
 				24D82BF02A948A0D00A2A2CB /* RegistrationController.swift in Sources */,
