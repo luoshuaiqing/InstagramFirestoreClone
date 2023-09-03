@@ -59,20 +59,20 @@ class ProfileHeader: UICollectionReusableView {
     
     private let gridButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: ""), for: .normal)
+        button.setImage(UIImage(named: "grid"), for: .normal)
         return button
     }()
     
     private let listButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: ""), for: .normal)
+        button.setImage(UIImage(named: "list"), for: .normal)
         button.tintColor = UIColor(white: 0, alpha: 0.2)
         return button
     }()
     
     private let bookmarkButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: ""), for: .normal)
+        button.setImage(UIImage(named: "ribbon"), for: .normal)
         button.tintColor = UIColor(white: 0, alpha: 0.2)
         return button
     }()
@@ -100,6 +100,23 @@ class ProfileHeader: UICollectionReusableView {
         addSubview(stack)
         stack.centerY(inView: profileImageView)
         stack.anchor(left: profileImageView.rightAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12, height: 50)
+        
+        let topDivider = UIView()
+        topDivider.backgroundColor = .lightGray
+        
+        let bottomDivider = UIView()
+        bottomDivider.backgroundColor = .lightGray
+        
+        let buttonStack = UIStackView(arrangedSubviews: [gridButton, listButton, bookmarkButton])
+        buttonStack.distribution = .fillEqually
+        
+        addSubview(buttonStack)
+        addSubview(topDivider)
+        addSubview(bottomDivider)
+        
+        buttonStack.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 50)
+        topDivider.anchor(top: buttonStack.topAnchor, left: leftAnchor, right: rightAnchor, height: 0.5)
+        bottomDivider.anchor(top: buttonStack.bottomAnchor, left: leftAnchor, right: rightAnchor, height: 0.5)
     }
     
     required init?(coder: NSCoder) {
