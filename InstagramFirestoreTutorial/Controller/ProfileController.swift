@@ -26,7 +26,6 @@ class ProfileController: UICollectionViewController {
     func fetchUser() {
         UserService.fetchUser { user in
             self.user = user
-            navigationItem.title = user.username
         }
     }
     
