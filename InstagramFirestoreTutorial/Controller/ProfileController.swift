@@ -57,8 +57,6 @@ extension ProfileController {
         
         if let user = user {
             header.viewModel = ProfileHeaderViewModel(user: user)
-        } else {
-            print("DEBUG: User not yet set..")
         }
         
         return header
