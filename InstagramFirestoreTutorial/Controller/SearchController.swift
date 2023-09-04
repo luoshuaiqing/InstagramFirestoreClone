@@ -11,6 +11,9 @@ class SearchController: UITableViewController {
     private var users = [User]()
     private var filteredUsers = [User]()
     private let searchController = UISearchController(searchResultsController: nil)
+    private var isInSearchMode: Bool {
+        return searchController.isActive && !searchController.searchBar.text!.isEmpty
+    }
     
     // MARK: - Lifecycle
     
@@ -56,7 +59,7 @@ class SearchController: UITableViewController {
 extension SearchController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return isInSearchMode ? filteredUsers.count : users.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +73,7 @@ extension SearchController {
 
 extension SearchController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = users[indexPath.row]
+        let user = isInSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
         let controller = ProfileController(user: user)
         navigationController?.pushViewController(controller, animated: true)
     }
