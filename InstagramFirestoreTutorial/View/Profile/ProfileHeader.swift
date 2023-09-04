@@ -19,6 +19,8 @@ class ProfileHeader: UICollectionReusableView {
         }
     }
     
+    weak var delegate: ProfileHeaderDelegate?
+    
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
