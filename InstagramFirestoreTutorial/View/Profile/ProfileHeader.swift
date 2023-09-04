@@ -4,9 +4,7 @@ import UIKit
 import SDWebImage
 
 protocol ProfileHeaderDelegate: AnyObject {
-    func header(_ profilerHeader: ProfileHeader, wantsToFollow uid: String)
-    func header(_ profilerHeader: ProfileHeader, wantsToUnfollow uid: String)
-    func headerWantsToShowEdit(_ profilerHeader: ProfileHeader)
+    func header(_ profilerHeader: ProfileHeader, didTapActionHandlerFor user: User)
 }
 
 class ProfileHeader: UICollectionReusableView {
@@ -140,7 +138,8 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Actions
     
     @objc func handleEditProfileFollowTapped() {
-        print("DEBUG")
+        guard let viewModel = viewModel else { return }
+        delegate?.header(self, didTapActionHandlerFor: viewModel.user)
     }
     
     // MARK: - Helpers
