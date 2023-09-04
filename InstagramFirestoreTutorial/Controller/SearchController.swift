@@ -9,6 +9,7 @@ class SearchController: UITableViewController {
     // MARK: - Properties
     
     private var users = [User]()
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Lifecycle
     
@@ -17,6 +18,7 @@ class SearchController: UITableViewController {
         
         configureTableView()
         fetchUsers()
+        configureSearchController()
     }
     
     // MARK: - API
@@ -36,6 +38,15 @@ class SearchController: UITableViewController {
         
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 64
+    }
+    
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
     }
 }
 
@@ -61,5 +72,15 @@ extension SearchController {
         let user = users[indexPath.row]
         let controller = ProfileController(user: user)
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension SearchController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text?.lowercased() else { return }
+        
+        
     }
 }
