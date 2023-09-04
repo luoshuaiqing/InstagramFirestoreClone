@@ -3,7 +3,7 @@
 import UIKit
 
 protocol AuthenticationDelegate: AnyObject {
-    func auehtnicationDidComplete()
+    func authenticationDidComplete()
 }
 
 class LoginController: UIViewController {
@@ -77,7 +77,7 @@ class LoginController: UIViewController {
                 return
             }
             
-            self.delegate?.auehtnicationDidComplete()
+            self.delegate?.authenticationDidComplete()
         }
     }
     

@@ -79,7 +79,7 @@ class RegistrationController: UIViewController {
             }
             
             print("DEBUG: Successfully registered user with firestore..")
-            self.delegate?.auehtnicationDidComplete()
+            self.delegate?.authenticationDidComplete()
         }
     }
     

@@ -110,9 +110,9 @@
             filePath = "InstagramFirestoreTutorial/Controller/MainTabController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "auehtnicationDidComplete()"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "authenticationDidComplete()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

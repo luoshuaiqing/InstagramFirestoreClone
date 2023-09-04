@@ -20,6 +20,7 @@ class MainTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchUser()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,12 +37,7 @@ class MainTabController: UITabBarController {
     }
     
     func checkIfUserIsLoggedIn() {
-        guard !hasCheckedWhetherUserIsLoggedIn else {
-            hasCheckedWhetherUserIsLoggedIn = true
-            return
-        }
-        fetchUser()
-        if Auth.auth().currentUser == nil {
+        if !hasCheckedWhetherUserIsLoggedIn, Auth.auth().currentUser == nil {
             let controller = LoginController()
             controller.delegate = self
             let nav = UINavigationController(rootViewController: controller)
@@ -81,7 +77,7 @@ class MainTabController: UITabBarController {
 }
 
 extension MainTabController: AuthenticationDelegate {
-    func auehtnicationDidComplete() {
+    func authenticationDidComplete() {
         fetchUser()
         self.dismiss(animated: true, completion: nil)
     }
