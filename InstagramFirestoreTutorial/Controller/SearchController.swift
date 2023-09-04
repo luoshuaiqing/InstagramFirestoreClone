@@ -53,3 +53,11 @@ extension SearchController {
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
+
+extension SearchController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
