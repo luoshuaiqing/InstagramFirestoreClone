@@ -26,6 +26,7 @@
 		24E955B92AA4F264001E776A /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955B82AA4F264001E776A /* ProfileHeaderViewModel.swift */; };
 		24E955BC2AA4F849001E776A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24E955BB2AA4F849001E776A /* SDWebImage */; };
 		24E955BE2AA645B4001E776A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955BD2AA645B4001E776A /* UserCell.swift */; };
+		24E955C02AA65B45001E776A /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955BF2AA65B45001E776A /* UserCellViewModel.swift */; };
 		24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */; };
 		24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */; };
 		24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B32A92CDB7002D97E3 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		24E955B62AA4F038001E776A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24E955B82AA4F264001E776A /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		24E955BD2AA645B4001E776A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		24E955BF2AA65B45001E776A /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		24F658AC2A92CDB7002D97E3 /* InstagramFirestoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */,
 				24E955B82AA4F264001E776A /* ProfileHeaderViewModel.swift */,
+				24E955BF2AA65B45001E776A /* UserCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				24E955B92AA4F264001E776A /* ProfileHeaderViewModel.swift in Sources */,
 				24E955B52AA4EECD001E776A /* Constants.swift in Sources */,
 				24F658D02A92D68F002D97E3 /* FeedController.swift in Sources */,
+				24E955C02AA65B45001E776A /* UserCellViewModel.swift in Sources */,
 				24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */,
 				24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */,
 				248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */,
