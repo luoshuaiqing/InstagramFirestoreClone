@@ -142,8 +142,8 @@
             filePath = "InstagramFirestoreTutorial/Controller/ProfileController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "header(_:didTapActionHandlerFor:)"
             landmarkType = "7">
             <Locations>
@@ -206,8 +206,8 @@
             filePath = "InstagramFirestoreTutorial/Controller/ProfileController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "header(_:didTapActionHandlerFor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "InstagramFirestoreTutorial/Controller/ProfileController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "header(_:didTapActionHandlerFor:)"
             landmarkType = "7">
          </BreakpointContent>
