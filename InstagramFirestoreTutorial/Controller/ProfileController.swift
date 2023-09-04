@@ -25,13 +25,21 @@ class ProfileController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
-        checkIfUserIsFollowed()
+        fetchUserFollowStatus()
+        fetchUserStats()
     }
     
     // MARK: - API
     
-    func checkIfUserIsFollowed() {
-        UserService.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
+    func fetchUserStats() {
+        UserService.fetchUserStats(uid: user.uid) { stats in
+            self.user.stats = stats
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchUserFollowStatus() {
+        UserService.fetchUserFollowStatus(uid: user.uid) { isFollowed in
             self.user.isFollowed = isFollowed
             self.collectionView.reloadData()
         }

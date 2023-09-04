@@ -10,6 +10,8 @@ struct User {
     let username: String
     let uid: String
     
+    var stats: UserStats!
+    
     var isFollowed: Bool?
     
     var isCurrentUser: Bool {
@@ -23,4 +25,9 @@ struct User {
         self.username = dictionary["username"] as? String ?? ""
         self.uid = dictionary["uid"] as? String ?? ""
     }
+}
+
+struct UserStats {
+    let followers: Int
+    let followings: Int
 }
