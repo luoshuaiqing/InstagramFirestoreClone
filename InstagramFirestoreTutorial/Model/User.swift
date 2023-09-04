@@ -10,7 +10,7 @@ struct User {
     let username: String
     let uid: String
     
-    var isFollowed = false
+    var isFollowed: Bool?
     
     var isCurrentUser: Bool {
         return Auth.auth().currentUser?.uid == uid

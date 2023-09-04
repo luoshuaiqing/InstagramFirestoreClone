@@ -37,6 +37,13 @@ struct UserService {
     }
     
     static func checkIfUserIsFollowed(uid: String, completion: @escaping(Bool) -> Void) {
-        
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        COLLECTION_FOLLOWINGS.document(currentUid).collection("user-followings").document(uid).getDocument { snapshot, error in
+            if snapshot?.exists == true {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
     }
 }
