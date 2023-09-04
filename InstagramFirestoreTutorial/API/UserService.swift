@@ -35,4 +35,8 @@ struct UserService {
             COLLECTION_FOLLOWERS.document(uid).collection("user-followers").document(currentUid).delete(completion: completion)
         }
     }
+    
+    static func checkIfUserIsFollowed(uid: String, completion: @escaping(Bool) -> Void) {
+        
+    }
 }
