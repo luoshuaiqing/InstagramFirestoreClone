@@ -10,7 +10,7 @@ struct User {
     let username: String
     let uid: String
     
-    var stats: UserStats!
+    var stats: UserStats = UserStats(followers: 0, followings: 0)
     
     var isFollowed: Bool?
     
