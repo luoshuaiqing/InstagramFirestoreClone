@@ -3,6 +3,12 @@
 import UIKit
 import SDWebImage
 
+protocol ProfileHeaderDelegate: AnyObject {
+    func header(_ profilerHeader: ProfileHeader, wantsToFollow uid: String)
+    func header(_ profilerHeader: ProfileHeader, wantsToUnfollow uid: String)
+    func headerWantsToShowEdit(_ profilerHeader: ProfileHeader)
+}
+
 class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Properties
