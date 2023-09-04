@@ -20,6 +20,8 @@ class SearchController: UITableViewController {
     
     func configureTableView() {
         view.backgroundColor = .white
+        
+        tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
@@ -33,6 +35,7 @@ extension SearchController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        cell.backgroundColor = .systemBlue
         return cell
     }
 }
