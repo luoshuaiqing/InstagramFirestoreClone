@@ -7,24 +7,43 @@ class MainTabController: UITabBarController {
     
     // MARK: - Properties
     
-    var hasCheckedWhetherUserIsLoggedIn = false
+    private var hasCheckedWhetherUserIsLoggedIn = false
     
     // MARK: - Lifecycle
     
+    private var user: User? {
+        didSet {
+            guard let user = user else { return }
+            configureViewControllers(withUser: user)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewControllers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         checkIfUserIsLoggedIn()
     }
     
     // MARK: - API
     
+    func fetchUser() {
+        UserService.fetchUser { user in
+            self.user = user
+        }
+    }
+    
     func checkIfUserIsLoggedIn() {
-        if Auth.auth().currentUser == nil, !hasCheckedWhetherUserIsLoggedIn {
+        guard !hasCheckedWhetherUserIsLoggedIn else {
+            hasCheckedWhetherUserIsLoggedIn = true
+            return
+        }
+        fetchUser()
+        if Auth.auth().currentUser == nil {
             let controller = LoginController()
+            controller.delegate = self
             let nav = UINavigationController(rootViewController: controller)
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
@@ -34,7 +53,7 @@ class MainTabController: UITabBarController {
     
     // MARK: - Helpers
     
-    func configureViewControllers() {
+    func configureViewControllers(withUser user: User) {
         view.backgroundColor = .white
 
         let feedLayout = UICollectionViewFlowLayout()
@@ -42,8 +61,9 @@ class MainTabController: UITabBarController {
         let search = templateNavigationController(unselectedImage: UIImage(named: "search_unselected")!, selectedImage: UIImage(named: "search_selected")!, rootViewController: SearchController())
         let imageSelector = templateNavigationController(unselectedImage: UIImage(named: "plus_unselected")!, selectedImage: UIImage(named: "plus_unselected")!, rootViewController: ImageSelectorController())
         let notifications = templateNavigationController(unselectedImage: UIImage(named: "like_unselected")!, selectedImage: UIImage(named: "like_selected")!, rootViewController: NotificationsController())
-        let profileLayout = UICollectionViewFlowLayout()
-        let profile = templateNavigationController(unselectedImage: UIImage(named: "profile_unselected")!, selectedImage: UIImage(named: "profile_selected")!, rootViewController: ProfileController(collectionViewLayout: profileLayout))
+        
+        let profileController = ProfileController(user: user)
+        let profile = templateNavigationController(unselectedImage: UIImage(named: "profile_unselected")!, selectedImage: UIImage(named: "profile_selected")!, rootViewController:profileController)
         
         viewControllers = [feed, search, imageSelector, notifications, profile]
         
@@ -58,4 +78,11 @@ class MainTabController: UITabBarController {
         return nav
     }
     
+}
+
+extension MainTabController: AuthenticationDelegate {
+    func auehtnicationDidComplete() {
+        fetchUser()
+        self.dismiss(animated: true, completion: nil)
+    }
 }
