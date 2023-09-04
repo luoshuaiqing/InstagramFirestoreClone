@@ -47,7 +47,7 @@ class SearchController: UITableViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
-//        definesPresentationContext = false
+        definesPresentationContext = false
     }
 }
 
