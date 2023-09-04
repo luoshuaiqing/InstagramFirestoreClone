@@ -17,7 +17,7 @@ struct ProfileHeaderViewModel {
         if user.isCurrentUser {
             return "Edit Profile"
         }
-        return user.isCurrentUser ? "Following" : "Follow"
+        return user.isFollowed ? "Following" : "Follow"
     }
     
     var followButtonBackgroundColor: UIColor {
