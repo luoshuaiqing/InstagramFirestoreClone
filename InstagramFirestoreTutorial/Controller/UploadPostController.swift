@@ -26,6 +26,7 @@ class UploadPostController: UIViewController {
     // MARK: - Helpers
     
     func configureUI() {
+        view.backgroundColor = .white
         navigationItem.title = "Upload Post"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .done, target: self, action: #selector(didTapDone))
