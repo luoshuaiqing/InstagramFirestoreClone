@@ -6,6 +6,29 @@ class UploadPostController: UIViewController {
     
     // MARK: - Properties
     
+    private let photoImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.setDimensions(height: 180, width: 180)
+        iv.layer.cornerRadius = 10
+        iv.image = UIImage(named: "venom-7")
+        return iv
+    }()
+    
+    private let captionTextView: UITextView = {
+        let tv = UITextView()
+        return tv
+    }()
+    
+    private let characterCountLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightGray
+        label.font = .systemFont(ofSize: 14)
+        label.text = "0/100"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -30,6 +53,16 @@ class UploadPostController: UIViewController {
         navigationItem.title = "Upload Post"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .done, target: self, action: #selector(didTapDone))
+        
+        view.addSubview(photoImageView)
+        photoImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 8)
+        photoImageView.centerX(inView: view)
+        
+        view.addSubview(captionTextView)
+        captionTextView.anchor(top: photoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 16, paddingLeft: 12, paddingRight: 12, height: 64)
+        
+        view.addSubview(characterCountLabel)
+        characterCountLabel.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 12, paddingRight: 12)
     }
     
 }
