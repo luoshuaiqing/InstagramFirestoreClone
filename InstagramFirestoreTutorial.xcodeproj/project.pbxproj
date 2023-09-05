@@ -28,6 +28,7 @@
 		24E955BE2AA645B4001E776A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955BD2AA645B4001E776A /* UserCell.swift */; };
 		24E955C02AA65B45001E776A /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955BF2AA65B45001E776A /* UserCellViewModel.swift */; };
 		24E955C62AA6CC97001E776A /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 24E955C52AA6CC97001E776A /* YPImagePicker */; };
+		24E955C82AA6DE14001E776A /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E955C72AA6DE14001E776A /* UploadPostController.swift */; };
 		24F658B02A92CDB7002D97E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */; };
 		24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */; };
 		24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F658B32A92CDB7002D97E3 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		24E955B82AA4F264001E776A /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		24E955BD2AA645B4001E776A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		24E955BF2AA65B45001E776A /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		24E955C72AA6DE14001E776A /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		24F658AC2A92CDB7002D97E3 /* InstagramFirestoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F658AF2A92CDB7002D97E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F658B12A92CDB7002D97E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				24F658D32A92D6A7002D97E3 /* ImageSelectorController.swift */,
 				24F658D52A92D6B1002D97E3 /* NotificationsController.swift */,
 				24F658D72A92D6BA002D97E3 /* ProfileController.swift */,
+				24E955C72AA6DE14001E776A /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */,
 				24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */,
+				24E955C82AA6DE14001E776A /* UploadPostController.swift in Sources */,
 				24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */,
 				24D82BEE2A948A0300A2A2CB /* LoginController.swift in Sources */,
 				24F658DA2A92E008002D97E3 /* FeedCell.swift in Sources */,

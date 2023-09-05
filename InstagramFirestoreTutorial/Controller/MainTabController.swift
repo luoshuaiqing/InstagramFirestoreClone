@@ -76,6 +76,14 @@ class MainTabController: UITabBarController {
         return nav
     }
     
+    func didFinishPickingMedia(_ picker: YPImagePicker) {
+        picker.didFinishPicking { [ picker] items, cancelled in
+            picker.dismiss(animated: true) {
+                guard let selectedImage = items.singlePhoto?.image else { return }   
+            }
+        }
+    }
+    
 }
 
 // MARK: - AuthenticationDelegate
@@ -105,6 +113,8 @@ extension MainTabController: UITabBarControllerDelegate {
             let picker = YPImagePicker(configuration: config)
             picker.modalPresentationStyle = .fullScreen
             present(picker, animated: true, completion: nil)
+            
+            didFinishPickingMedia(picker)
         }
         return true
     }
