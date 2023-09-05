@@ -78,13 +78,13 @@ class MainTabController: UITabBarController {
     
     func didFinishPickingMedia(_ picker: YPImagePicker) {
         picker.didFinishPicking { [unowned picker] items, cancelled in
-            picker.dismiss(animated: true) {
+            picker.dismiss(animated: false) {
                 guard let selectedImage = items.singlePhoto?.image else { return }
                 
                 let controller = UploadPostController()
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true, completion: nil)
+                self.present(nav, animated: false, completion: nil)
             }
         }
     }
