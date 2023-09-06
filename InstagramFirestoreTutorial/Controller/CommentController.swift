@@ -12,12 +12,14 @@ class CommentController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCollectionView()
+        configureUI()
     }
 
     // MARK: - Helpers
 
-    func configureCollectionView() {
+    func configureUI() {
+        navigationController?.title = "Comments"
+
         collectionView.backgroundColor = .white
         collectionView.register(CommentCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
