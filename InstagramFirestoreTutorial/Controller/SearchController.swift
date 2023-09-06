@@ -29,7 +29,6 @@ class SearchController: UITableViewController {
     
     func fetchUsers() {
         UserService.fetchUsers { users in
-            print("DEBUG: users \(users)")
             self.users = users
             self.tableView.reloadData()
         }

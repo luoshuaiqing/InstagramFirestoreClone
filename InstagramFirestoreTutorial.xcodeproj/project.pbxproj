@@ -13,6 +13,7 @@
 		244E5E272AA07C670022DD79 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E262AA07C670022DD79 /* FirebaseStorage */; };
 		245501772AA836010089A1D4 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245501762AA836010089A1D4 /* PostService.swift */; };
 		2455017A2AA839FF0089A1D4 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 245501792AA839FF0089A1D4 /* JGProgressHUD */; };
+		2455017C2AA83BEB0089A1D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455017B2AA83BEB0089A1D4 /* Post.swift */; };
 		248CA09F2A9A6074007D543A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */; };
 		248CA0A12A9DB8F1007D543A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248CA0A02A9DB8F1007D543A /* GoogleService-Info.plist */; };
 		248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA0A72A9DBECC007D543A /* ImageUploader.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		245501762AA836010089A1D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		2455017B2AA83BEB0089A1D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		248CA0A02A9DB8F1007D543A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		248CA0A72A9DBECC007D543A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				24E955B62AA4F038001E776A /* User.swift */,
+				2455017B2AA83BEB0089A1D4 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				24F658CE2A92CEE0002D97E3 /* MainTabController.swift in Sources */,
 				24F658DC2A92E0BD002D97E3 /* Extensions.swift in Sources */,
 				248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */,
+				2455017C2AA83BEB0089A1D4 /* Post.swift in Sources */,
 				248CA0AA2A9DBED4007D543A /* AuthService.swift in Sources */,
 				245501772AA836010089A1D4 /* PostService.swift in Sources */,
 				24E955B32AA4EEA9001E776A /* UserService.swift in Sources */,
