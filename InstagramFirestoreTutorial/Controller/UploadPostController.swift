@@ -68,7 +68,6 @@ class UploadPostController: UIViewController {
                 return
             }
             
-            self.dismiss(animated: true, completion: nil)
             self.delegate?.controllerDidFinishUploadingPost(self)
         }
     }
