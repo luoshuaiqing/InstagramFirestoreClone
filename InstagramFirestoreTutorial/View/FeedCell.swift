@@ -17,6 +17,7 @@ class FeedCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
+        iv.backgroundColor = .lightGray
         return iv
     }()
 
@@ -33,6 +34,7 @@ class FeedCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
+        iv.backgroundColor = .lightGray
         return iv
     }()
 
