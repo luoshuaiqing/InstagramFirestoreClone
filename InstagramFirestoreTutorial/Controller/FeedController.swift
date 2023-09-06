@@ -8,7 +8,9 @@ private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController {
 
     // MARK: - Properties
-
+    
+    var post: Post?
+    
     private var posts = [Post]()
 
     // MARK: - Lifecycle
@@ -27,14 +29,14 @@ class FeedController: UICollectionViewController {
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         navigationItem.title = "Feed"
-        
+
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         collectionView.refreshControl = refresher
     }
 
     // MARK: - Actions
-    
+
     @objc func handleRefresh() {
         posts.removeAll()
         fetchPosts()
@@ -68,7 +70,7 @@ class FeedController: UICollectionViewController {
 
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        return post == nil ? posts.count : 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

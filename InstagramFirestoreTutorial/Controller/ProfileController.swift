@@ -89,7 +89,9 @@ extension ProfileController {
 // MARK: - UICollectionViewDelegate
 
 extension ProfileController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
