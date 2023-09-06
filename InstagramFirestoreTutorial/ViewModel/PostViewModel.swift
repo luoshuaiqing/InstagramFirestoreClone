@@ -20,9 +20,13 @@ struct PostViewModel {
     var caption: String {
         return post.caption
     }
-
-    var likes: Int {
-        return post.likes
+    
+    var likesLabelText: String {
+        if post.likes != 1 {
+            return "\(post.likes) likes"
+        } else {
+            return "\(post.likes) like"
+        }
     }
 
     init(post: Post) {
