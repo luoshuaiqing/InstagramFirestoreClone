@@ -70,6 +70,7 @@ class FeedCell: UICollectionViewCell {
     private let captionLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 0
         return label
     }()
 
