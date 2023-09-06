@@ -25,6 +25,7 @@ struct PostService {
             guard let documents = snapshot?.documents else { return }
 
             let posts = documents.map { Post(postId: $0.documentID, dictionary: $0.data()) }
+            completion(posts)
         }
     }
 }
