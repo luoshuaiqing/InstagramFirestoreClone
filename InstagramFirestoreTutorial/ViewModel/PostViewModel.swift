@@ -3,7 +3,7 @@
 import Foundation
 
 struct PostViewModel {
-    private let post: Post
+    let post: Post
 
     var imageUrl: URL? {
         return URL(string: post.imageUrl)
@@ -20,16 +20,12 @@ struct PostViewModel {
     var caption: String {
         return post.caption
     }
-    
+
     var likesLabelText: String {
         if post.likes != 1 {
             return "\(post.likes) likes"
         } else {
             return "\(post.likes) like"
         }
-    }
-
-    init(post: Post) {
-        self.post = post
     }
 }

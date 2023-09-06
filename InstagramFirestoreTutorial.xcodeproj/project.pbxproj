@@ -15,6 +15,8 @@
 		2455017A2AA839FF0089A1D4 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 245501792AA839FF0089A1D4 /* JGProgressHUD */; };
 		2455017C2AA83BEB0089A1D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455017B2AA83BEB0089A1D4 /* Post.swift */; };
 		2455017E2AA841EE0089A1D4 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455017D2AA841EE0089A1D4 /* PostViewModel.swift */; };
+		245501802AA8D1800089A1D4 /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455017F2AA8D1800089A1D4 /* CommentController.swift */; };
+		245501822AA8D2610089A1D4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245501812AA8D2610089A1D4 /* CommentCell.swift */; };
 		248CA09F2A9A6074007D543A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */; };
 		248CA0A12A9DB8F1007D543A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248CA0A02A9DB8F1007D543A /* GoogleService-Info.plist */; };
 		248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA0A72A9DBECC007D543A /* ImageUploader.swift */; };
@@ -54,6 +56,8 @@
 		245501762AA836010089A1D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2455017B2AA83BEB0089A1D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2455017D2AA841EE0089A1D4 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		2455017F2AA8D1800089A1D4 /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
+		245501812AA8D2610089A1D4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		248CA0A02A9DB8F1007D543A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		248CA0A72A9DBECC007D543A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				24F658D52A92D6B1002D97E3 /* NotificationsController.swift */,
 				24F658D72A92D6BA002D97E3 /* ProfileController.swift */,
 				24E955C72AA6DE14001E776A /* UploadPostController.swift */,
+				2455017F2AA8D1800089A1D4 /* CommentController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				24F658D92A92E008002D97E3 /* FeedCell.swift */,
 				24D82BF12A948F5000A2A2CB /* CustomTextField.swift */,
 				24E955BD2AA645B4001E776A /* UserCell.swift */,
+				245501812AA8D2610089A1D4 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				2455017E2AA841EE0089A1D4 /* PostViewModel.swift in Sources */,
 				24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */,
 				24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */,
+				245501802AA8D1800089A1D4 /* CommentController.swift in Sources */,
 				24E955C82AA6DE14001E776A /* UploadPostController.swift in Sources */,
 				24F658B42A92CDB7002D97E3 /* ViewController.swift in Sources */,
 				24D82BEE2A948A0300A2A2CB /* LoginController.swift in Sources */,
@@ -346,6 +353,7 @@
 				24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */,
 				24F658B22A92CDB7002D97E3 /* SceneDelegate.swift in Sources */,
 				24D82BF02A948A0D00A2A2CB /* RegistrationController.swift in Sources */,
+				245501822AA8D2610089A1D4 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
