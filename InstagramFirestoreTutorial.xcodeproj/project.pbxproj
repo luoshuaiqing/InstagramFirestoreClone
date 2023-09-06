@@ -12,6 +12,7 @@
 		244E5E252AA07C670022DD79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E242AA07C670022DD79 /* FirebaseFirestore */; };
 		244E5E272AA07C670022DD79 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E262AA07C670022DD79 /* FirebaseStorage */; };
 		245501772AA836010089A1D4 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245501762AA836010089A1D4 /* PostService.swift */; };
+		2455017A2AA839FF0089A1D4 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 245501792AA839FF0089A1D4 /* JGProgressHUD */; };
 		248CA09F2A9A6074007D543A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA09E2A9A6074007D543A /* AuthenticationViewModel.swift */; };
 		248CA0A12A9DB8F1007D543A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248CA0A02A9DB8F1007D543A /* GoogleService-Info.plist */; };
 		248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248CA0A72A9DBECC007D543A /* ImageUploader.swift */; };
@@ -90,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				244E5E232AA07C670022DD79 /* FirebaseDatabase in Frameworks */,
+				2455017A2AA839FF0089A1D4 /* JGProgressHUD in Frameworks */,
 				24E955C62AA6CC97001E776A /* YPImagePicker in Frameworks */,
 				244E5E272AA07C670022DD79 /* FirebaseStorage in Frameworks */,
 				244E5E212AA07C670022DD79 /* FirebaseAuth in Frameworks */,
@@ -244,6 +246,7 @@
 				244E5E262AA07C670022DD79 /* FirebaseStorage */,
 				24E955BB2AA4F849001E776A /* SDWebImage */,
 				24E955C52AA6CC97001E776A /* YPImagePicker */,
+				245501792AA839FF0089A1D4 /* JGProgressHUD */,
 			);
 			productName = InstagramFirestoreTutorial;
 			productReference = 24F658AC2A92CDB7002D97E3 /* InstagramFirestoreTutorial.app */;
@@ -277,6 +280,7 @@
 				244E5E1F2AA07C670022DD79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				24E955BA2AA4F849001E776A /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				24E955C42AA6CC97001E776A /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				245501782AA839FF0089A1D4 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 24F658AD2A92CDB7002D97E3 /* Products */;
 			projectDirPath = "";
@@ -561,6 +565,14 @@
 				kind = branch;
 			};
 		};
+		245501782AA839FF0089A1D4 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		24E955BA2AA4F849001E776A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -599,6 +611,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 244E5E1F2AA07C670022DD79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		245501792AA839FF0089A1D4 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 245501782AA839FF0089A1D4 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 		24E955BB2AA4F849001E776A /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
