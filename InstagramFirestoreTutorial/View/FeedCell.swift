@@ -128,6 +128,7 @@ class FeedCell: UICollectionViewCell {
     func configure() {
         guard let viewModel = viewModel else { return }
         captionLabel.text = viewModel.caption
+        postImageView.sd_setImage(with: viewModel.imageUrl)
     }
 
     func configureActionButtons() {
