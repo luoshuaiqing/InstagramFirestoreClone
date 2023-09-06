@@ -10,6 +10,7 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     
     private var user: User
+    private var posts = [Post]()
     
     // MARK: - Lifecycle
     
@@ -27,6 +28,7 @@ class ProfileController: UICollectionViewController {
         configureCollectionView()
         fetchUserFollowStatus()
         fetchUserStats()
+        fetchPosts()
     }
     
     // MARK: - API
@@ -41,6 +43,13 @@ class ProfileController: UICollectionViewController {
     func fetchUserFollowStatus() {
         UserService.fetchUserFollowStatus(uid: user.uid) { isFollowed in
             self.user.isFollowed = isFollowed
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchPosts() {
+        PostService.fetchPosts(forUser: user.uid) { posts in
+            self.posts = posts
             self.collectionView.reloadData()
         }
     }
@@ -60,7 +69,7 @@ class ProfileController: UICollectionViewController {
 
 extension ProfileController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
