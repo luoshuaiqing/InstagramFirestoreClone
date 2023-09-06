@@ -2,17 +2,27 @@
 
 import UIKit
 
+protocol UploadPostControllerDelegate: AnyObject {
+    func controllerDidFinishUploadingPost(_ controller: UploadPostController)
+}
+
 class UploadPostController: UIViewController {
     
     // MARK: - Properties
     
+    weak var delegate: UploadPostControllerDelegate?
+    
+    var selectedImage: UIImage? {
+        didSet {
+            photoImageView.image = selectedImage
+        }
+    }
     private let photoImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.setDimensions(height: 180, width: 180)
         iv.layer.cornerRadius = 10
-        iv.image = UIImage(named: "venom-7")
         return iv
     }()
     
@@ -46,7 +56,18 @@ class UploadPostController: UIViewController {
     }
     
     @objc func didTapDone() {
-
+        guard let image = selectedImage else { return }
+        guard let caption = captionTextView.text else { return }
+        
+        PostService.uploadPost(caption: caption, image: image) { error in
+            if let error = error {
+                print("DEBUG: Failed to upload post with error \(error.localizedDescription)")
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+            self.delegate?.controllerDidFinishUploadingPost(self)
+        }
     }
     
     // MARK: - Helpers
