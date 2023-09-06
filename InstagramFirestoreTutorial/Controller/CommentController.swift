@@ -18,7 +18,7 @@ class CommentController: UICollectionViewController {
     // MARK: - Helpers
 
     func configureUI() {
-        navigationController?.title = "Comments"
+        navigationItem.title = "Comments"
 
         collectionView.backgroundColor = .white
         collectionView.register(CommentCell.self, forCellWithReuseIdentifier: reuseIdentifier)
