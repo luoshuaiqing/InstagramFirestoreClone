@@ -12,4 +12,8 @@ struct PostViewModel {
     var caption: String {
         return post.caption
     }
+    
+    init(post: Post) {
+        self.post = post
+    }
 }
