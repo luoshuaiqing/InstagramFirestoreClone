@@ -18,7 +18,7 @@ class CommentCell: UICollectionViewCell {
 
     private let commentLabel: UILabel = {
         let label = UILabel()
-        let attributedString = NSMutableAttributedString(string: "joker", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
+        let attributedString = NSMutableAttributedString(string: "joker ", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
         attributedString.append(NSAttributedString(string: "Some test comment for now..", attributes: [.font: UIFont.systemFont(ofSize: 14)]))
         label.attributedText = attributedString
         return label
