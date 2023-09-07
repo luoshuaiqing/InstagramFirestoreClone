@@ -78,5 +78,7 @@ extension CommentController: UICollectionViewDelegateFlowLayout {
 extension CommentController: CommentInputAccesoryViewDelegate {
     func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
         inputView.clearCommentTextView()
+        
+        CommentService.uploadComment(comment: comment, postID: <#T##String#>, user: <#T##User#>, completion: <#T##(FirestoreCompletion)##(FirestoreCompletion)##(Error?) -> Void#>)
     }
 }
