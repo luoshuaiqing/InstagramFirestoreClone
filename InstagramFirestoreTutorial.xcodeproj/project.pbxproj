@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2424B6732AA98262003FBD4D /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */; };
 		244E5E212AA07C670022DD79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E202AA07C670022DD79 /* FirebaseAuth */; };
 		244E5E232AA07C670022DD79 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E222AA07C670022DD79 /* FirebaseDatabase */; };
 		244E5E252AA07C670022DD79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E242AA07C670022DD79 /* FirebaseFirestore */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		245501762AA836010089A1D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2455017B2AA83BEB0089A1D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2455017D2AA841EE0089A1D4 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				24D82BF12A948F5000A2A2CB /* CustomTextField.swift */,
 				24E955BD2AA645B4001E776A /* UserCell.swift */,
 				245501812AA8D2610089A1D4 /* CommentCell.swift */,
+				2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				248CA0A82A9DBECC007D543A /* ImageUploader.swift in Sources */,
 				2455017C2AA83BEB0089A1D4 /* Post.swift in Sources */,
 				248CA0AA2A9DBED4007D543A /* AuthService.swift in Sources */,
+				2424B6732AA98262003FBD4D /* CommentInputAccesoryView.swift in Sources */,
 				245501772AA836010089A1D4 /* PostService.swift in Sources */,
 				24E955B32AA4EEA9001E776A /* UserService.swift in Sources */,
 				24E955AE2AA379C5001E776A /* ProfileCell.swift in Sources */,
