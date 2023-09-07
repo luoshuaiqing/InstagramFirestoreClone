@@ -9,7 +9,7 @@ protocol CommentInputAccesoryViewDelegate: AnyObject {
 class CommentInputAccesoryView: UIView {
 
     // MARK: - Properties
-    
+
     weak var delegate: CommentInputAccesoryViewDelegate?
 
     private let commentTextView: InputTextView = {
@@ -63,5 +63,12 @@ class CommentInputAccesoryView: UIView {
 
     @objc func handlePostTapped() {
         delegate?.inputView(self, wantsToUploadComment: commentTextView.text)
+    }
+
+    // MARK: - Helpers
+
+    func clearCommentTextView() {
+        commentTextView.text = nil
+        commentTextView.placeholderLabel.isHidden = false
     }
 }
