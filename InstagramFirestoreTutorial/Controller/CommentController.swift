@@ -9,7 +9,7 @@ class CommentController: UICollectionViewController {
     // MARK: - Properties
 
     private let post: Post
-    
+
     private lazy var commentInputView: CommentInputAccesoryView = {
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
         let cv = CommentInputAccesoryView(frame: frame)
@@ -26,7 +26,7 @@ class CommentController: UICollectionViewController {
     }
 
     // MARK: - Lifecycle
-    
+
     init(post: Post) {
         self.post = post
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -86,7 +86,7 @@ extension CommentController: CommentInputAccesoryViewDelegate {
     func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
         guard let tab = self.tabBarController as? MainTabController else { return }
         guard let user = tab.user else { return }
-        
+
         CommentService.uploadComment(comment: comment, postID: post.postId, user: user) { error in
             inputView.clearCommentTextView()
         }
