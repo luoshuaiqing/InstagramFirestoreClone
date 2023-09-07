@@ -10,11 +10,11 @@ struct CommentViewModel {
         return URL(string: comment.profileImageUrl)
     }
 
-    var username: String {
+    private var username: String {
         return comment.username
     }
 
-    var commentText: String {
+    private var commentText: String {
         return comment.comment
     }
 
