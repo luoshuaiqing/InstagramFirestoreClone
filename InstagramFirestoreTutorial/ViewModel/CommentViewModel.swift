@@ -1,6 +1,6 @@
 // Copyright © 2023 Snap, Inc. All rights reserved.
 
-import Foundation
+import UIKit
 
 struct CommentViewModel {
 
@@ -20,5 +20,11 @@ struct CommentViewModel {
 
     init(comment: Comment) {
         self.comment = comment
+    }
+
+    func commentLabelText() -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: "\(username) ", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
+        attributedString.append(NSAttributedString(string: commentText, attributes: [.font: UIFont.systemFont(ofSize: 14)]))
+        return attributedString
     }
 }
