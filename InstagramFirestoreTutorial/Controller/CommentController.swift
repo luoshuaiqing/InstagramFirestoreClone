@@ -32,6 +32,10 @@ class CommentController: UICollectionViewController {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -86,8 +90,9 @@ extension CommentController: CommentInputAccesoryViewDelegate {
     func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
         guard let tab = self.tabBarController as? MainTabController else { return }
         guard let user = tab.user else { return }
-
+        self.showLoader(true)
         CommentService.uploadComment(comment: comment, postID: post.postId, user: user) { error in
+            self.showLoader(false)
             inputView.clearCommentTextView()
         }
     }
