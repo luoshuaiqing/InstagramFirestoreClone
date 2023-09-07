@@ -10,6 +10,7 @@
 		2424B6732AA98262003FBD4D /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */; };
 		2424B6752AA9920E003FBD4D /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6742AA9920E003FBD4D /* CommentService.swift */; };
 		2424B6772AA9942B003FBD4D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6762AA9942B003FBD4D /* Comment.swift */; };
+		2424B6792AA99688003FBD4D /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6782AA99688003FBD4D /* CommentViewModel.swift */; };
 		244E5E212AA07C670022DD79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E202AA07C670022DD79 /* FirebaseAuth */; };
 		244E5E232AA07C670022DD79 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E222AA07C670022DD79 /* FirebaseDatabase */; };
 		244E5E252AA07C670022DD79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E242AA07C670022DD79 /* FirebaseFirestore */; };
@@ -59,6 +60,7 @@
 		2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		2424B6742AA9920E003FBD4D /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		2424B6762AA9942B003FBD4D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2424B6782AA99688003FBD4D /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		245501762AA836010089A1D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2455017B2AA83BEB0089A1D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2455017D2AA841EE0089A1D4 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				24E955B82AA4F264001E776A /* ProfileHeaderViewModel.swift */,
 				24E955BF2AA65B45001E776A /* UserCellViewModel.swift */,
 				2455017D2AA841EE0089A1D4 /* PostViewModel.swift */,
+				2424B6782AA99688003FBD4D /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2424B6792AA99688003FBD4D /* CommentViewModel.swift in Sources */,
 				2455017E2AA841EE0089A1D4 /* PostViewModel.swift in Sources */,
 				24D82BF22A948F5000A2A2CB /* CustomTextField.swift in Sources */,
 				24E955B02AA379D1001E776A /* ProfileHeader.swift in Sources */,
