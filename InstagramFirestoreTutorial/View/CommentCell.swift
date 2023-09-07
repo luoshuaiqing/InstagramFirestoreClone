@@ -22,11 +22,7 @@ class CommentCell: UICollectionViewCell {
         return iv
     }()
 
-    private let commentLabel: UILabel = {
-        let label = UILabel()
-        label.attributedText = attributedString
-        return label
-    }()
+    private let commentLabel = UILabel()
 
     // MARK: - Lifecycle
 
@@ -49,5 +45,6 @@ class CommentCell: UICollectionViewCell {
     func configure() {
         guard let viewModel = viewModel else { return }
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        commentLabel.attributedText = viewModel.commentLabelText()
     }
 }
