@@ -20,6 +20,7 @@ class CommentInputAccesoryView: UIView {
         button.setTitle("Post", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 14)
+        button.setDimensions(height: 50, width: 50)
         button.addTarget(self, action: #selector(handlePostTapped), for: .touchUpInside)
         return button
     }()
@@ -33,7 +34,6 @@ class CommentInputAccesoryView: UIView {
 
         addSubview(postButton)
         postButton.anchor(top: topAnchor, right: rightAnchor, paddingRight: 8)
-        postButton.setDimensions(height: 50, width: 50)
 
         addSubview(commentTextView)
         commentTextView.anchor(top: topAnchor, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: postButton.leftAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 8)
