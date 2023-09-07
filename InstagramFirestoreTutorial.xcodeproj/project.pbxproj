@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2424B6732AA98262003FBD4D /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */; };
 		2424B6752AA9920E003FBD4D /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6742AA9920E003FBD4D /* CommentService.swift */; };
+		2424B6772AA9942B003FBD4D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424B6762AA9942B003FBD4D /* Comment.swift */; };
 		244E5E212AA07C670022DD79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E202AA07C670022DD79 /* FirebaseAuth */; };
 		244E5E232AA07C670022DD79 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E222AA07C670022DD79 /* FirebaseDatabase */; };
 		244E5E252AA07C670022DD79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 244E5E242AA07C670022DD79 /* FirebaseFirestore */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		2424B6722AA98262003FBD4D /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		2424B6742AA9920E003FBD4D /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		2424B6762AA9942B003FBD4D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		245501762AA836010089A1D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2455017B2AA83BEB0089A1D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2455017D2AA841EE0089A1D4 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				24E955B62AA4F038001E776A /* User.swift */,
 				2455017B2AA83BEB0089A1D4 /* Post.swift */,
+				2424B6762AA9942B003FBD4D /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				24F658DA2A92E008002D97E3 /* FeedCell.swift in Sources */,
 				24F658D42A92D6A7002D97E3 /* ImageSelectorController.swift in Sources */,
 				2424B6752AA9920E003FBD4D /* CommentService.swift in Sources */,
+				2424B6772AA9942B003FBD4D /* Comment.swift in Sources */,
 				24F658D62A92D6B1002D97E3 /* NotificationsController.swift in Sources */,
 				248CA09F2A9A6074007D543A /* AuthenticationViewModel.swift in Sources */,
 				24E955BE2AA645B4001E776A /* UserCell.swift in Sources */,
