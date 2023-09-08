@@ -10,7 +10,11 @@ class FeedController: UICollectionViewController {
     // MARK: - Properties
 
     var post: Post?
-    private var posts = [Post]()
+    private var posts = [Post]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -63,7 +67,17 @@ class FeedController: UICollectionViewController {
         PostService.fetchPosts { posts in
             self.posts = posts
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.reloadData()
+            self.checkIfUserLikedPosts()
+        }
+    }
+
+    func checkIfUserLikedPosts() {
+        posts.forEach { post in
+            PostService.checkIfUserLikedPost(post: post) { didLike in
+                if let index = self.posts.firstIndex(where: { $0.postId == post.postId }) {
+                    self.posts[index].didLike = didLike
+                }
+            }
         }
     }
 }
@@ -107,18 +121,20 @@ extension FeedController: FeedCellDelegate {
         let controller = CommentController(post: post)
         navigationController?.pushViewController(controller, animated: true)
     }
-    
+
     func cell(_ cell: FeedCell, didLike post: Post) {
         cell.viewModel?.post.didLike.toggle()
         if (post.didLike) {
             PostService.unlikePost(post: post) { error in
                 cell.likeButton.setImage(UIImage(named: "like_unselected"), for: .normal)
                 cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes = post.likes - 1
             }
         } else {
             PostService.likePost(post: post) { error in
                 cell.likeButton.setImage(UIImage(named: "like_selected"), for: .normal)
                 cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes = post.likes + 1
             }
         }
     }

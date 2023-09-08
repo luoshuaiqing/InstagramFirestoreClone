@@ -1,6 +1,6 @@
 // Copyright © 2023 Snap, Inc. All rights reserved.
 
-import Foundation
+import UIKit
 
 struct PostViewModel {
     var post: Post
@@ -19,6 +19,15 @@ struct PostViewModel {
 
     var caption: String {
         return post.caption
+    }
+    
+    var likeButtonTintColor: UIColor {
+        return post.didLike ? .red : .black
+    }
+    
+    var likeButtonImage: UIImage! {
+        let imageName = post.didLike ? "like_selected" : "like_unselected"
+        return UIImage(named: imageName)
     }
 
     var likesLabelText: String {
